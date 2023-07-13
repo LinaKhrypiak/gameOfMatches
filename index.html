@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Game of matches</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Matches Game</h1>
+    <div class="game-mode">
+      <h2>Choose game mode:</h2>
+      <div class="buttons">
+      <button onclick="selectGameMode('player')">Play against another player 🧑</button>
+      <button onclick="selectGameMode('ai')">Play against AI 🤖</button>
+      </div>
+    </div>
+    <div class="gameplay hidden" id="playerGameplay">
+      <h2>Player1 vs Player2</h2>
+      <div>
+        <label for="player1Move">Player 1 Move:</label>
+        <input type="number" id="player1Move" min="1" max="3" required>
+      </div>
+      <div>
+        <label for="player2Move">Player 2 Move:</label>
+        <input type="number" id="player2Move" min="1" max="3" required>
+      </div>
+      <button onclick="playAgainstPlayer()" class="buttonPlay">Play</button>
+    </div>
+    <div class="gameplay hidden" id="aiGameplay">
+      <h2>Player vs AI</h2>
+      <div>
+        <label for="playerMove">Player Move:</label>
+        <input type="number" id="playerMove" min="1" max="3" required>
+      </div>
+      <button onclick="playAgainstAI()" class="buttonPlay">Play</button>
+    </div>
+    <div id = "dataOfGame">
+      <div id="totalMatchesOfPlayer1"></div>
+      <div id="totalMatchesOfPlayer2"></div>
+      <div id="result"></div>
+    </div>
+  </div>
+  <script src="startGame.js"></script>
+</body>
+
+</html>
